@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "887c25f1-f60a-4e64-8b83-2279ec934e52",
+		"name": "NovelCOVID_API",
+		"description": "API for Current cases and more stuff about COVID-19 or the Novel CoronaVirus Strain.\n\n** Note: this collection is highly outdated. If you want to get a more updated list of endpoints, please visit the official documentation at [https://disease.sh/docs](https://disease.sh/docs) **\n\n- [Website](https://github.com/disease-sh/API)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://corona.lmao.ninja/v2/all?yesterday=",
+					"protocol": "https",
+					"host": [
+						"corona",
+						"lmao",
+						"ninja"
+					],
+					"path": [
+						"v2",
+						"all"
+					],
+					"query": [
+						{
+							"key": "yesterday",
+							"value": "",
+							"description": "For this parameter you can show yesterday data. Available values : true, false, 1, 0."
+						}
+					]
+				},
+				"description": "Get global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes."
+			},
+			"response": [
+				{
+					"name": "All",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/v2/all?yesterday",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"v2",
+								"all"
+							],
+							"query": [
+								{
+									"key": "yesterday",
+									"value": null,
+									"description": "For this parameter you can show yesterday data. Available values : true, false, 1, 0."
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 16:19:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-PT0q00fR8irJ6Q7VVMqEf0tiRvk\""
+						},
+						{
+							"key": "NG-Cache-Status",
+							"value": "HIT"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "58577861382da6d5-DUB"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "022a8990c60000a6d5812e3200000001"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"updated\": 1587140275989,\n    \"cases\": 2181308,\n    \"todayCases\": 95022,\n    \"deaths\": 145471,\n    \"todayDeaths\": 6996,\n    \"recovered\": 547069,\n    \"active\": 1488768,\n    \"critical\": 56602,\n    \"casesPerOneMillion\": 280,\n    \"deathsPerOneMillion\": 18,\n    \"tests\": 18215929,\n    \"testsPerOneMillion\": 2338.3,\n    \"affectedCountries\": 212\n}"
+				}
+			]
+		},
+		{
+			"name": "States",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://corona.lmao.ninja/v2/states?sort=&yesterday=",
+					"protocol": "https",
+					"host": [
+						"corona",
+						"lmao",
+						"ninja"
+					],
+					"path": [
+						"v2",
+						"states"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "",
+							"description": "For this parameter you can provide a key from the country model (e.g. cases, todayCases, deaths, active, etc) to sort the states from greatest to least, depending on the key.\n\nAvailable values : cases, todayCases, deaths, todayDeaths, active."
+						},
+						{
+							"key": "yesterday",
+							"value": "",
+							"description": "For this parameter you can show yesterday data\n\nAvailable values : true, false, 1, 0."
+						}
+					]
+				},
+				"description": "Get stats on United States of America States with COVID-19, including cases, new cases, deaths, new deaths, and active cases. Data is updated every 10 minutes."
+			},
+			"response": [
+				{
+					"name": "States",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/v2/states?sort&yesterday",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"v2",
+								"states"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": null,
+									"description": "For this parameter you can provide a key from the country model (e.g. cases, todayCases, deaths, active, etc) to sort the states from greatest to least, depending on the key.\n\nAvailable values : cases, todayCases, deaths, todayDeaths, active."
+								},
+								{
+									"key": "yesterday",
+									"value": null,
+									"description": "For this parameter you can show yesterday data\n\nAvailable values : true, false, 1, 0."
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 16:24:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f91-RTyqisHxfuJhsFFIuos3gaPYUII\""
+						},
+						{
+							"key": "NG-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "58577e6f4b7ba6d5-DUB"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "022a8d598d0000a6d581358200000001"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"state\": \"New York\",\n        \"cases\": 226198,\n        \"todayCases\": 7636,\n        \"deaths\": 16106,\n        \"todayDeaths\": 606,\n        \"active\": 186205,\n        \"tests\": 550579,\n        \"testsPerOneMillion\": 28064\n    },\n    {\n        \"state\": \"New Jersey\",\n        \"cases\": 75317,\n        \"todayCases\": 4287,\n        \"deaths\": 3518,\n        \"todayDeaths\": 362,\n        \"active\": 70528,\n        \"tests\": 154010,\n        \"testsPerOneMillion\": 17340\n    },\n    {\n        \"state\": \"Massachusetts\",\n        \"cases\": 32181,\n        \"todayCases\": 2263,\n        \"deaths\": 1245,\n        \"todayDeaths\": 137,\n        \"active\": 22818,\n        \"tests\": 140773,\n        \"testsPerOneMillion\": 20610\n    },\n    {\n        \"state\": \"Michigan\",\n        \"cases\": 29263,\n        \"todayCases\": 1204,\n        \"deaths\": 2093,\n        \"todayDeaths\": 172,\n        \"active\": 26727,\n        \"tests\": 97093,\n        \"testsPerOneMillion\": 9751\n    },\n    {\n        \"state\": \"Pennsylvania\",\n        \"cases\": 27735,\n        \"todayCases\": 982,\n        \"deaths\": 837,\n        \"todayDeaths\": 58,\n        \"active\": 26248,\n        \"tests\": 141470,\n        \"testsPerOneMillion\": 11060\n    },\n    {\n        \"state\": \"California\",\n        \"cases\": 27634,\n        \"todayCases\": 796,\n        \"deaths\": 951,\n        \"todayDeaths\": 87,\n        \"active\": 25333,\n        \"tests\": 227600,\n        \"testsPerOneMillion\": 5814\n    },\n    {\n        \"state\": \"Illinois\",\n        \"cases\": 25733,\n        \"todayCases\": 1140,\n        \"deaths\": 1072,\n        \"todayDeaths\": 124,\n        \"active\": 24611,\n        \"tests\": 122589,\n        \"testsPerOneMillion\": 9561\n    },\n    {\n        \"state\": \"Florida\",\n        \"cases\": 23340,\n        \"todayCases\": 821,\n        \"deaths\": 668,\n        \"todayDeaths\": 54,\n        \"active\": 22028,\n        \"tests\": 220892,\n        \"testsPerOneMillion\": 10724\n    },\n    {\n        \"state\": \"Louisiana\",\n        \"cases\": 22532,\n        \"todayCases\": 581,\n        \"deaths\": 1156,\n        \"todayDeaths\": 53,\n        \"active\": 21326,\n        \"tests\": 126586,\n        \"testsPerOneMillion\": 27143\n    },\n    {\n        \"state\": \"Texas\",\n        \"cases\": 16638,\n        \"todayCases\": 629,\n        \"deaths\": 404,\n        \"todayDeaths\": 29,\n        \"active\": 12557,\n        \"tests\": 158547,\n        \"testsPerOneMillion\": 5686\n    },\n    {\n        \"state\": \"Georgia\",\n        \"cases\": 16368,\n        \"todayCases\": 1108,\n        \"deaths\": 617,\n        \"todayDeaths\": 41,\n        \"active\": 15720,\n        \"tests\": 67939,\n        \"testsPerOneMillion\": 6598\n    },\n    {\n        \"state\": \"Connecticut\",\n        \"cases\": 15884,\n        \"todayCases\": 1129,\n        \"deaths\": 971,\n        \"todayDeaths\": 103,\n        \"active\": 14848,\n        \"tests\": 53122,\n        \"testsPerOneMillion\": 14832\n    },\n    {\n        \"state\": \"Washington\",\n        \"cases\": 11034,\n        \"todayCases\": 124,\n        \"deaths\": 581,\n        \"todayDeaths\": 14,\n        \"active\": 8738,\n        \"tests\": 122854,\n        \"testsPerOneMillion\": 16842\n    },\n    {\n        \"state\": \"Maryland\",\n        \"cases\": 10784,\n        \"todayCases\": 752,\n        \"deaths\": 392,\n        \"todayDeaths\": 43,\n        \"active\": 9656,\n        \"tests\": 58843,\n        \"testsPerOneMillion\": 9802\n    },\n    {\n        \"state\": \"Indiana\",\n        \"cases\": 9542,\n        \"todayCases\": 587,\n        \"deaths\": 477,\n        \"todayDeaths\": 41,\n        \"active\": 9051,\n        \"tests\": 51115,\n        \"testsPerOneMillion\": 7701\n    },\n    {\n        \"state\": \"Colorado\",\n        \"cases\": 8675,\n        \"todayCases\": 395,\n        \"deaths\": 374,\n        \"todayDeaths\": 17,\n        \"active\": 7803,\n        \"tests\": 41830,\n        \"testsPerOneMillion\": 7563\n    },\n    {\n        \"state\": \"Ohio\",\n        \"cases\": 8414,\n        \"todayCases\": 623,\n        \"deaths\": 389,\n        \"todayDeaths\": 28,\n        \"active\": 7905,\n        \"tests\": 74840,\n        \"testsPerOneMillion\": 6429\n    },\n    {\n        \"state\": \"Virginia\",\n        \"cases\": 6889,\n        \"todayCases\": 389,\n        \"deaths\": 208,\n        \"todayDeaths\": 13,\n        \"active\": 5730,\n        \"tests\": 46444,\n        \"testsPerOneMillion\": 5520\n    },\n    {\n        \"state\": \"Tennessee\",\n        \"cases\": 6262,\n        \"todayCases\": 183,\n        \"deaths\": 141,\n        \"todayDeaths\": 6,\n        \"active\": 3925,\n        \"tests\": 85049,\n        \"testsPerOneMillion\": 12787\n    },\n    {\n        \"state\": \"North Carolina\",\n        \"cases\": 5608,\n        \"todayCases\": 227,\n        \"deaths\": 148,\n        \"todayDeaths\": 16,\n        \"active\": 4577,\n        \"tests\": 70917,\n        \"testsPerOneMillion\": 6983\n    },\n    {\n        \"state\": \"Missouri\",\n        \"cases\": 5178,\n        \"todayCases\": 283,\n        \"deaths\": 168,\n        \"todayDeaths\": 9,\n        \"active\": 4826,\n        \"tests\": 50432,\n        \"testsPerOneMillion\": 8281\n    },\n    {\n        \"state\": \"Alabama\",\n        \"cases\": 4404,\n        \"todayCases\": 163,\n        \"deaths\": 137,\n        \"todayDeaths\": 14,\n        \"active\": 4247,\n        \"tests\": 36363,\n        \"testsPerOneMillion\": 7475\n    },\n    {\n        \"state\": \"Arizona\",\n        \"cases\": 4234,\n        \"todayCases\": 272,\n        \"deaths\": 150,\n        \"todayDeaths\": 8,\n        \"active\": 4014,\n        \"tests\": 47398,\n        \"testsPerOneMillion\": 6823\n    },\n    {\n        \"state\": \"South Carolina\",\n        \"cases\": 3931,\n        \"todayCases\": 275,\n        \"deaths\": 109,\n        \"todayDeaths\": 2,\n        \"active\": 3822,\n        \"tests\": 36284,\n        \"testsPerOneMillion\": 7321\n    },\n    {\n        \"state\": \"Wisconsin\",\n        \"cases\": 3875,\n        \"todayCases\": 154,\n        \"deaths\": 197,\n        \"todayDeaths\": 15,\n        \"active\": 3591,\n        \"tests\": 44849,\n        \"testsPerOneMillion\": 7761\n    },\n    {\n        \"state\": \"Rhode Island\",\n        \"cases\": 3838,\n        \"todayCases\": 309,\n        \"deaths\": 105,\n        \"todayDeaths\": 18,\n        \"active\": 3723,\n        \"tests\": 28064,\n        \"testsPerOneMillion\": 26560\n    },\n    {\n        \"state\": \"Mississippi\",\n        \"cases\": 3624,\n        \"todayCases\": 264,\n        \"deaths\": 129,\n        \"todayDeaths\": 7,\n        \"active\": 3495,\n        \"tests\": 37733,\n        \"testsPerOneMillion\": 12625\n    },\n    {\n        \"state\": \"Nevada\",\n        \"cases\": 3321,\n        \"todayCases\": 110,\n        \"deaths\": 142,\n        \"todayDeaths\": 6,\n        \"active\": 2010,\n        \"tests\": 34504,\n        \"testsPerOneMillion\": 11805\n    },\n    {\n        \"state\": \"Utah\",\n        \"cases\": 2683,\n        \"todayCases\": 141,\n        \"deaths\": 21,\n        \"todayDeaths\": 1,\n        \"active\": 2444,\n        \"tests\": 49678,\n        \"testsPerOneMillion\": 16313\n    },\n    {\n        \"state\": \"Kentucky\",\n        \"cases\": 2429,\n        \"todayCases\": 138,\n        \"deaths\": 129,\n        \"todayDeaths\": 7,\n        \"active\": 1994,\n        \"tests\": 29747,\n        \"testsPerOneMillion\": 6699\n    },\n    {\n        \"state\": \"Oklahoma\",\n        \"cases\": 2357,\n        \"todayCases\": 94,\n        \"deaths\": 131,\n        \"todayDeaths\": 8,\n        \"active\": 1071,\n        \"tests\": 30795,\n        \"testsPerOneMillion\": 7860\n    },\n    {\n        \"state\": \"District Of Columbia\",\n        \"cases\": 2350,\n        \"todayCases\": 153,\n        \"deaths\": 81,\n        \"todayDeaths\": 9,\n        \"active\": 1717,\n        \"tests\": 12150,\n        \"testsPerOneMillion\": 17750\n    },\n    {\n        \"state\": \"Iowa\",\n        \"cases\": 2141,\n        \"todayCases\": 146,\n        \"deaths\": 60,\n        \"todayDeaths\": 7,\n        \"active\": 1340,\n        \"tests\": 20675,\n        \"testsPerOneMillion\": 6600\n    },\n    {\n        \"state\": \"Delaware\",\n        \"cases\": 2075,\n        \"todayCases\": 61,\n        \"deaths\": 52,\n        \"todayDeaths\": 6,\n        \"active\": 1645,\n        \"tests\": 13350,\n        \"testsPerOneMillion\": 14060\n    },\n    {\n        \"state\": \"Minnesota\",\n        \"cases\": 1912,\n        \"todayCases\": 103,\n        \"deaths\": 94,\n        \"todayDeaths\": 7,\n        \"active\": 798,\n        \"tests\": 41675,\n        \"testsPerOneMillion\": 7540\n    },\n    {\n        \"state\": \"Oregon\",\n        \"cases\": 1736,\n        \"todayCases\": 73,\n        \"deaths\": 64,\n        \"todayDeaths\": 6,\n        \"active\": 1672,\n        \"tests\": 33351,\n        \"testsPerOneMillion\": 8170\n    },\n    {\n        \"state\": \"Arkansas\",\n        \"cases\": 1620,\n        \"todayCases\": 21,\n        \"deaths\": 37,\n        \"todayDeaths\": 3,\n        \"active\": 1035,\n        \"tests\": 22675,\n        \"testsPerOneMillion\": 7582\n    },\n    {\n        \"state\": \"Idaho\",\n        \"cases\": 1609,\n        \"todayCases\": 22,\n        \"deaths\": 41,\n        \"todayDeaths\": 0,\n        \"active\": 1544,\n        \"tests\": 15398,\n        \"testsPerOneMillion\": 9123\n    },\n    {\n        \"state\": \"Kansas\",\n        \"cases\": 1603,\n        \"todayCases\": 109,\n        \"deaths\": 80,\n        \"todayDeaths\": 4,\n        \"active\": 1283,\n        \"tests\": 16122,\n        \"testsPerOneMillion\": 5543\n    },\n    {\n        \"state\": \"New Mexico\",\n        \"cases\": 1597,\n        \"todayCases\": 113,\n        \"deaths\": 44,\n        \"todayDeaths\": 8,\n        \"active\": 1258,\n        \"tests\": 34488,\n        \"testsPerOneMillion\": 16482\n    },\n    {\n        \"state\": \"South Dakota\",\n        \"cases\": 1311,\n        \"todayCases\": 143,\n        \"deaths\": 7,\n        \"todayDeaths\": 1,\n        \"active\": 931,\n        \"tests\": 9859,\n        \"testsPerOneMillion\": 11407\n    },\n    {\n        \"state\": \"New Hampshire\",\n        \"cases\": 1211,\n        \"todayCases\": 72,\n        \"deaths\": 34,\n        \"todayDeaths\": 2,\n        \"active\": 812,\n        \"tests\": 12166,\n        \"testsPerOneMillion\": 9055\n    },\n    {\n        \"state\": \"Nebraska\",\n        \"cases\": 1066,\n        \"todayCases\": 114,\n        \"deaths\": 24,\n        \"todayDeaths\": 3,\n        \"active\": 1020,\n        \"tests\": 13173,\n        \"testsPerOneMillion\": 6916\n    },\n    {\n        \"state\": \"Maine\",\n        \"cases\": 796,\n        \"todayCases\": 26,\n        \"deaths\": 27,\n        \"todayDeaths\": 3,\n        \"active\": 436,\n        \"tests\": 14872,\n        \"testsPerOneMillion\": 11158\n    },\n    {\n        \"state\": \"Vermont\",\n        \"cases\": 768,\n        \"todayCases\": 9,\n        \"deaths\": 35,\n        \"todayDeaths\": 5,\n        \"active\": 733,\n        \"tests\": 11507,\n        \"testsPerOneMillion\": 18412\n    },\n    {\n        \"state\": \"West Virginia\",\n        \"cases\": 739,\n        \"todayCases\": 21,\n        \"deaths\": 13,\n        \"todayDeaths\": 1,\n        \"active\": 579,\n        \"tests\": 18306,\n        \"testsPerOneMillion\": 10008\n    },\n    {\n        \"state\": \"Hawaii\",\n        \"cases\": 541,\n        \"todayCases\": 11,\n        \"deaths\": 9,\n        \"todayDeaths\": 0,\n        \"active\": 158,\n        \"tests\": 21985,\n        \"testsPerOneMillion\": 15460\n    },\n    {\n        \"state\": \"Montana\",\n        \"cases\": 415,\n        \"todayCases\": 11,\n        \"deaths\": 7,\n        \"todayDeaths\": 0,\n        \"active\": 190,\n        \"tests\": 9936,\n        \"testsPerOneMillion\": 9538\n    },\n    {\n        \"state\": \"Wyoming\",\n        \"cases\": 401,\n        \"todayCases\": 113,\n        \"deaths\": 2,\n        \"todayDeaths\": 0,\n        \"active\": 223,\n        \"tests\": 6129,\n        \"testsPerOneMillion\": 10534\n    },\n    {\n        \"state\": \"North Dakota\",\n        \"cases\": 393,\n        \"todayCases\": 28,\n        \"deaths\": 9,\n        \"todayDeaths\": 0,\n        \"active\": 221,\n        \"tests\": 11704,\n        \"testsPerOneMillion\": 15560\n    },\n    {\n        \"state\": \"Alaska\",\n        \"cases\": 300,\n        \"todayCases\": 7,\n        \"deaths\": 9,\n        \"todayDeaths\": 0,\n        \"active\": 181,\n        \"tests\": 8735,\n        \"testsPerOneMillion\": 11828\n    },\n    {\n        \"state\": \"Guam\",\n        \"cases\": 135,\n        \"todayCases\": 0,\n        \"deaths\": 5,\n        \"todayDeaths\": 0,\n        \"active\": 57,\n        \"tests\": 605,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"Northern Mariana Islands\",\n        \"cases\": 13,\n        \"todayCases\": 0,\n        \"deaths\": 2,\n        \"todayDeaths\": 0,\n        \"active\": 11,\n        \"tests\": 45,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"Puerto Rico\",\n        \"cases\": 1043,\n        \"todayCases\": 69,\n        \"deaths\": 56,\n        \"todayDeaths\": 5,\n        \"active\": 983,\n        \"tests\": 9829,\n        \"testsPerOneMillion\": 2902\n    },\n    {\n        \"state\": \"United States Virgin Islands\",\n        \"cases\": 51,\n        \"todayCases\": 0,\n        \"deaths\": 1,\n        \"todayDeaths\": 0,\n        \"active\": 4,\n        \"tests\": 417,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"US Military\",\n        \"cases\": 4766,\n        \"todayCases\": 0,\n        \"deaths\": 17,\n        \"todayDeaths\": 0,\n        \"active\": 4011,\n        \"tests\": 0,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"Navajo Nation\",\n        \"cases\": 921,\n        \"todayCases\": 83,\n        \"deaths\": 38,\n        \"todayDeaths\": 5,\n        \"active\": 883,\n        \"tests\": 0,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"Grand Princess Ship\",\n        \"cases\": 103,\n        \"todayCases\": 0,\n        \"deaths\": 3,\n        \"todayDeaths\": 0,\n        \"active\": 100,\n        \"tests\": 0,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"Wuhan Repatriated\",\n        \"cases\": 3,\n        \"todayCases\": 0,\n        \"deaths\": 0,\n        \"todayDeaths\": 0,\n        \"active\": 3,\n        \"tests\": 3,\n        \"testsPerOneMillion\": 0\n    },\n    {\n        \"state\": \"Diamond Princess Ship\",\n        \"cases\": 46,\n        \"todayCases\": 0,\n        \"deaths\": 0,\n        \"todayDeaths\": 0,\n        \"active\": 46,\n        \"tests\": 46,\n        \"testsPerOneMillion\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://corona.lmao.ninja/v2/states/:states?yesterday=true",
+					"protocol": "https",
+					"host": [
+						"corona",
+						"lmao",
+						"ninja"
+					],
+					"path": [
+						"v2",
+						"states",
+						":states"
+					],
+					"query": [
+						{
+							"key": "yesterday",
+							"value": "true",
+							"description": "For this parameter you can show yesterday data\nAvailable values : true, false, 1, 0."
+						}
+					],
+					"variable": [
+						{
+							"key": "states",
+							"value": "New York",
+							"description": "state name or comma separated names spelled correctly."
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "State",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://corona.lmao.ninja/v2/states/:states?yesterday=",
+							"protocol": "https",
+							"host": [
+								"corona",
+								"lmao",
+								"ninja"
+							],
+							"path": [
+								"v2",
+								"states",
+								":states"
+							],
+							"query": [
+								{
+									"key": "yesterday",
+									"value": "",
+									"description": "For this parameter you can show yesterday data\nAvailable values : true, false, 1, 0."
+								}
+							],
+							"variable": [
+								{
+									"key": "states",
+									"value": "New York",
+									"description": "state name or comma separated names spelled correctly."
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 Apr 2020 16:24:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"90-zD/NgV5M9SQk7fnH5LChLct5TtA\""
+						},
+						{
+							"key": "NG-Cache-Status",
+							"value": "HIT"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "58577f120fa1a6d5-DUB"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "022a8dbf450000a6d58125e200000001"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"state\": \"New York\",\n    \"cases\": 226198,\n    \"todayCases\": 7636,\n    \"deaths\": 16106,\n    \"todayDeaths\": 606,\n    \"active\": 186205,\n    \"tests\": 550579,\n    \"testsPerOneMillion\": 28064\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}
